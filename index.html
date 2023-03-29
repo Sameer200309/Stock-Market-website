@@ -1,0 +1,1907 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <title>SKILLS</title>
+    <style>
+        * {
+            padding: 0;
+            padding: 0%;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .header {
+            height: 100px;
+            background: #000000;
+            padding: 0 20px;
+            color: #fff;
+        }
+
+        .logo {
+            font-size: 40px;
+            font-weight: 800;
+            line-height: 100px;
+            float: left;
+
+        }
+
+        .logo span {
+            color: #279400;
+        }
+
+        .menu {
+            float: right;
+            line-height: 100px;
+        }
+
+        .menu button {
+            background-color: #279400;
+            color: #fafafa;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            transition: 0.3s ease-in-out;
+        }
+
+        .menu button:hover {
+            background-color: #fafafa;
+            color: #279400;
+        }
+
+        .menu a {
+            color: #fff;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 0 10px;
+            transition: 0.4s;
+        }
+
+        .show-menu-btn,
+        .hide-menu-btn {
+            transition: 0.4s;
+            font-size: 30px;
+            cursor: pointer;
+            display: none;
+        }
+
+        .show-menu-btn {
+            float: right;
+        }
+
+        .show-menu-btn i {
+            line-height: 100px;
+        }
+
+        .menu a:hover,
+        .show-menu-btn:hover,
+        .hide-menu-btn:hover {
+            color: #279400;
+        }
+
+        #chk {
+            position: absolute;
+            visibility: hidden;
+            z-index: -1111;
+        }
+
+        .content {
+            padding: 0 20px;
+        }
+
+        .content img {
+            width: 100%;
+            max-width: 700px;
+            margin: 20px 0;
+        }
+
+        .content p {
+            text-align: justify;
+        }
+
+        @media screen and (max-width:800px) {
+
+            .show-menu-btn,
+            .hide-menu-btn {
+                display: block;
+            }
+
+            .menu {
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background: #333;
+                right: -100%;
+                top: 0;
+                text-align: center;
+                padding: 80px 0;
+                line-height: normal;
+                transition: 0.7s;
+            }
+
+            .menu a {
+                display: block;
+                padding: 20px;
+            }
+
+            .hide-menu-btn {
+                position: absolute;
+                top: 40px;
+                right: 40px;
+            }
+
+            #chk:checked~.menu {
+                right: 0;
+            }
+        }
+
+
+        #banner {
+            background-color: #ffffff;
+            height: 700px;
+            width: 100%;
+
+        }
+
+        #banner .parent {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #banner .parent .child1 {
+            height: auto;
+            width: 600px;
+            margin: -10px 39px;
+        }
+
+        #banner .parent .child1 h2 {
+            font-size: 30px;
+        }
+
+        @media screen and (max-width:786px) {
+            #banner .parent .child1 h2 {
+                padding: 20px 0 0 0;
+                font-size: 15px;
+            }
+        }
+
+        #banner .parent .child1 h2 span {
+            color: #459851;
+        }
+
+        @media screen and (max-width:786px) {
+            #banner .parent .child1 h2 span {
+                font-size: 20px;
+            }
+        }
+
+        #banner .parent .child1 h2 strong {
+            font-size: 40px;
+        }
+
+        @media screen and (max-width:786px) {
+            #banner .parent .child1 h2 strong {
+                font-size: 20px;
+            }
+        }
+
+        #banner .parent .child1 p {
+            font-size: 10px;
+            font-weight: 400;
+            color: #808080;
+            padding: 15px 0;
+        }
+
+        #banner .parent .child1 img {
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            object-fit: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+
+        #banner .parent .child1 button {
+            margin: 0 10px 0 0;
+            padding: 10px 20px;
+            font-weight: 600;
+            color: #459851;
+            background-color: #F1FCFB;
+            border: none;
+            transition: 0.3s ease-in-out;
+        }
+
+        #banner .parent .child1 button:hover {
+            background: #000000;
+            color: #279400;
+        }
+
+        #banner .parent .child1 .list1 ul {
+            display: flex;
+            justify-content: space-around;
+            margin: 0px 0px 30px 0px;
+            padding: 20px 0;
+            color: #808080;
+            font-size: 13px;
+        }
+
+
+        #main {
+            background-color: #ffffff;
+            height: 100%;
+            width: 100%;
+            padding: 20px 0 0 0;
+        }
+
+        #main .parent {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #main .parent .box1 {
+            height: auto;
+            margin: 30px;
+            width: 600px;
+        }
+
+        #main .parent .box1 h2 span {
+            color: #459851;
+        }
+
+        #main .parent .box1 h2 u {
+            text-decoration: underline;
+            -webkit-text-decoration-color: #459851;
+            /* Safari */
+            text-decoration-color: #459851;
+        }
+
+        #main .parent .box1 p {
+            padding: 25px 0;
+            color: #000000;
+            font-size: 13px;
+            font-weight: 100;
+            margin-bottom: 28px;
+            line-height: 30px;
+
+        }
+
+        #main .parent .box1 .btn {
+            background-color: #459851;
+            color: #ffffff;
+            letter-spacing: 1px;
+            padding: 12px 70px;
+            border: none;
+            margin-right: 10px;
+            font-weight: 700;
+            transition: 0.3s ease-in-out;
+        }
+
+        #main .parent .box1 .btn:hover {
+            background-color: #000000;
+            color: #279400;
+        }
+
+        #main .parent .box1 img {
+            height: 90%;
+            width: 90%;
+            background-size: cover;
+            object-fit: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #learning {
+            background-color: #ffffff;
+            height: 100%;
+            width: 100%;
+            padding: 20px 0 0 0;
+        }
+
+        #learning .parent {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #learning .parent .box1 {
+            height: auto;
+            margin: 30px;
+            width: 600px;
+        }
+
+        #learning .parent .box1 h2 span {
+            color: #459851;
+        }
+
+        #learning .parent .box1 h2 u {
+            text-decoration: underline;
+            -webkit-text-decoration-color: #459851;
+            /* Safari */
+            text-decoration-color: #459851;
+        }
+
+        #learning .parent .box1 p {
+            padding: 25px 0;
+            color: #000000;
+            font-size: 13px;
+            font-weight: 100;
+            margin-bottom: 28px;
+            line-height: 30px;
+
+        }
+
+        #learning .parent .box1 .btn {
+            background-color: #459851;
+            color: #ffffff;
+            letter-spacing: 1px;
+            padding: 12px 70px;
+            border: none;
+            margin-right: 10px;
+            font-weight: 700;
+            transition: 0.3s ease-in-out;
+        }
+
+        #learning .parent .box1 .btn:hover {
+            background-color: #000000;
+            color: #279400;
+        }
+
+        #learning .parent .box1 img {
+            height: 90%;
+            width: 90%;
+            background-size: cover;
+            object-fit: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #info {
+            background-color: #8800ff;
+            height: 100%;
+            width: 100%;
+        }
+
+        #info h2 {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        #info .parent {
+            padding: 10px 0;
+            background-color: #ffff;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            flex-wrap: wrap;
+        }
+
+        #info .parent .box {
+            background-color: #ffff;
+            height: auto;
+            width: 350px;
+            margin: 10px;
+            border: solid;
+
+
+        }
+
+        #info .parent .box span {
+            font-size: 13px;
+            font-weight: bold;
+
+        }
+
+        #info .parent .box span {
+            font-size: 13px;
+            font-weight: 600;
+            padding: 0 13px;
+        }
+
+        #info .parent .box span img {
+            color: #929292;
+            padding: 0px 0px 0px 0px;
+            margin: 0px 0px 0px 18px;
+            height: 30px;
+            width: 30px;
+        }
+
+        #info .parent .box .section span img {
+            color: #929292;
+            margin: 0px 0px 0px 18px;
+            height: 10px;
+            width: 10px;
+        }
+
+        #info .parent .box .section p {
+            color: #929292;
+            font-size: 10px;
+            padding: 15px 10px;
+        }
+
+        #info .parent .box .section button {
+            margin: 0 0 13px 56px;
+            padding: 12px 70px;
+            background-color: #0099ff;
+            color: #ffffff;
+            border: none;
+            border-radius: 20px;
+            font-weight: bold;
+
+        }
+
+
+        @media screen and (max-width:786px) {
+            #info .parent .box .section button {
+                margin: 0 0 6px 32px;
+            }
+        }
+
+        #market {
+            background-color: #fafafa;
+            height: 100%;
+            width: 100%;
+            padding: 20px 0 0 0;
+
+        }
+
+        #market h2 {
+            text-align: center;
+            background-color: #8800ff;
+            color: #ffffff;
+        }
+
+        #market h4 {
+            text-align: center;
+            font-weight: 400;
+        }
+
+        #market .parent {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #market .parent .box1 {
+            height: auto;
+
+            width: 600px;
+        }
+
+        #market .parent .box1 .list1 ul {
+            display: flex;
+            justify-content: space-around;
+            margin: 0px 0px 30px -21px;
+            padding: 20px 0;
+            color: #000000;
+            font-size: 20px;
+
+        }
+
+        @media screen and (max-width:786px) {
+            #market .parent .box1 .list1 ul {
+                font-size: 14px;
+                margin: 0 0 0 17px;
+            }
+        }
+
+        #market .parent .box1 img {
+            height: 90%;
+            width: 90%;
+            background-size: cover;
+            object-fit: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #market .parent .box1 button {
+            background-color: #000000;
+            color: #ffffff;
+            font-weight: 600;
+            padding: 10px 60px;
+            transition: 0.3s ease-in-out;
+        }
+
+        #market .parent .box1 button:hover {
+            color: #279400;
+        }
+
+        @media screen and (max-width:786px) {
+            #market .parent .box1 button {
+                margin: 0 0 0 50px;
+            }
+
+        }
+
+
+        #activity {
+            background-color: #ffffff;
+            height: 100%;
+            width: 100%;
+            padding: 20px 0 0 0;
+        }
+
+        #activity .parent {
+            background: rgb(0, 65, 255);
+            background: linear-gradient(90deg, rgba(0, 65, 255, 0.7988445378151261) 0%, rgba(136, 0, 233, 0.7288165266106443) 100%);
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #activity .parent .box1 {
+            height: auto;
+            margin: 30px;
+            width: 600px;
+        }
+
+        #activity .parent .box1 h2 {
+            color: #ffffff;
+        }
+
+        #activity .parent .box1 .btn {
+            background-color: #ffffff;
+            color: #000000;
+            letter-spacing: 1px;
+            padding: 12px 70px;
+            border: none;
+            margin-right: 10px;
+            font-weight: 600;
+            transition: 0.3s ease-in-out;
+        }
+
+        #activity .parent .box1 .btn:hover {
+            background-color: #000000;
+            color: #279400;
+        }
+
+        #activity .parent .box1 .list {
+            padding: 25px 0;
+            color: #ffffff;
+        }
+
+        #activity .parent .box1 img {
+            height: 90%;
+            width: 90%;
+            background-size: cover;
+            object-fit: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #journey {
+            background-color: #fafafa;
+            height: 100%;
+            width: 100%;
+            padding: 20px 0 0 0;
+
+        }
+
+        #journey .parent {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #journey .parent .box1 {
+            height: auto;
+            width: 600px;
+
+        }
+
+
+        #journey .parent .box1 img {
+            height: 90%;
+            width: 90%;
+            background-size: cover;
+            object-fit: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #journey .parent .box1 .list {
+            padding: 30px 0;
+            font-weight: 600;
+        }
+
+        @media screen and (max-width:786px) {
+            #journey .parent .box1 .list {
+                margin: 0 0 0 18px;
+            }
+        }
+
+        #journey .parent .box1 button {
+            background-color: #000000;
+            color: #ffffff;
+            font-weight: 600;
+            padding: 10px 60px;
+
+
+        }
+
+        @media screen and (max-width:786px) {
+            #journey .parent .box1 button {
+                margin: 0 0 14px 50px;
+            }
+        }
+
+        #school {
+            background-color: #ffffff;
+            height: 100%;
+            width: 100%;
+            padding: 0px 0;
+
+        }
+
+        #school h1 {
+            text-align: center;
+            font-size: 30px;
+        }
+
+        #school h3 {
+            text-align: center;
+            color: #459851;
+            font-size: 25px;
+        }
+
+        #school .parent {
+            background: #ffffff;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 300px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: 30px 10px;
+        }
+
+        .card span img {
+            object-fit: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 20%;
+            width: 20%;
+        }
+
+        .card-heading {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 0;
+            padding: 8px 0;
+        }
+
+        .card-paragraph {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #808080;
+        }
+
+
+        #reason {
+            background-color: #ffffff;
+            height: 100%;
+            width: 100%;
+            padding: 20px 0;
+        }
+
+        @media screen and (max-width:786px) {
+            #reason {
+                padding: 0 0;
+            }
+        }
+
+        #reason h1 {
+            text-align: center;
+            padding: 20px 0 50px 0;
+        }
+
+        @media screen and (max-width:786px) {
+            #reason h1 {
+                font-size: 20px;
+                padding: 0px 0 20px 0;
+            }
+        }
+
+        #reason h1 span {
+            color: #459851;
+        }
+
+        #reason .parent {
+            height: 100%;
+            width: 100%;
+            justify-content: center;
+            flex-wrap: wrap;
+            display: flex;
+            align-items: center;
+        }
+
+        #reason .parent .card {
+            display: flex;
+            align-items: center;
+            border: none;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 10px;
+
+        }
+
+        #reason .parent .card-image {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+        }
+
+        #reason .parent .card-content {
+            padding: 10px 10px;
+        }
+
+        #reason .parent .card-heading {
+            font-size: 13px;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+
+        .skills {
+            width: 100%;
+            max-width: 300px;
+            padding: 0 20px;
+        }
+
+        .skill-name {
+            font-size: 12px;
+            font-weight: 400;
+            color: #000000;
+            text-transform: uppercase;
+            margin: 20px 0;
+        }
+
+        .skill-bar {
+            height: 10px;
+            background: #b6e0f2;
+            border-radius: 3px;
+        }
+
+        .skill-per {
+            height: 10px;
+            background: #459851;
+            border-radius: 3px;
+            position: relative;
+            animation: fillBars 2.5s 1;
+        }
+
+        .skill-per::before {
+            content: attr(per);
+            position: absolute;
+            padding: 4px 6px;
+            background: #f1f1f1;
+            border-radius: 4px;
+            font-size: 12px;
+            top: -35px;
+            right: 0;
+            transform: translateX(50%);
+        }
+
+        @keyframes fillBars {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        #box h1 {
+            text-align: center;
+            background-color: #070088;
+            color: #ffffff;
+            font-size: 50px;
+            font-weight: 300;
+        }
+
+        .flex {
+            height: auto;
+            width: 100%;
+            background-color: #070088;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 40px 0;
+            font-family: 'Bad Script', cursive;
+            transition: all 0.3s ease;
+        }
+
+        .flex_1 {
+            justify-content: center;
+            margin: -50px 0 0 0;
+        }
+
+        .flex_1 .child_1 {
+            margin: 0 10px;
+        }
+
+        .flex .child {
+            border-radius: 200px;
+            height: 180px;
+            width: 180px;
+            color: white;
+            font-size: 30px;
+            font-weight: 800;
+            display: flex;
+            justify-content: center;
+            letter-spacing: 3px;
+            align-items: center;
+            text-align: center;
+        }
+
+        .flex .child:hover {
+            color: #000000;
+
+        }
+
+        @media screen and (max-width:768px) {
+
+            .flex_1 {
+                justify-content: center;
+                margin: 0;
+            }
+
+            .child {
+                margin: 10px;
+            }
+
+            .flex_1 .child_1 {
+                margin: 10px;
+            }
+
+            .flex {
+                padding: 0;
+            }
+        }
+
+
+        #task {
+            background: #ffffff;
+            height: 100%;
+            width: 100%;
+        }
+
+        #task h1 {
+            text-align: center;
+            padding: 20px 0;
+            color: #000000;
+        }
+
+        #task h1 span {
+            color: #459851;
+        }
+
+        #task .parent {
+
+            height: auto;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        #accordion {
+            margin: 12px 50PX;
+            width: 917px;
+
+        }
+
+        @media screen and (max-width:786px) {
+            #accordion {
+                margin: 7px 13px 0px 13px;
+                padding: 20px 0 0 0;
+            }
+        }
+
+        #accordion li {
+            list-style: none;
+            width: 100%;
+            margin-bottom: 10px;
+            background: white;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        #accordion li label {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            color: #000000;
+        }
+
+        @media screen and (max-width:786px) {
+            #accordion li label {
+                font-size: 15px;
+            }
+        }
+
+        #accordion li label span {
+            transform: rotate(90deg);
+            font-size: 22px;
+            color: #000000;
+        }
+
+        #accordion label+input[type="radio"] {
+            display: none;
+        }
+
+        #accordion .content {
+            padding: 0 10px;
+            line-height: 26px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s;
+        }
+
+        #accordion .content p {
+            font-size: 17px;
+            color: #459851;
+            font-weight: 600;
+        }
+
+        @media screen and (max-width:786px) {
+            #accordion .content p {
+                font-size: 13px;
+            }
+        }
+
+        #accordion label+input[type="radio"]:checked+.content {
+            max-height: 400px;
+        }
+
+        .container {
+            max-width: 1170px;
+            margin: auto;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .footer {
+            background-color: #000000;
+            padding: 70px 0;
+        }
+
+        .footer-col {
+            width: 25%;
+            padding: 0 15px;
+        }
+
+        .footer-col h1 {
+            font-weight: 800;
+            font-size: 30px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .footer-col h1 span {
+            color: #459851;
+        }
+
+        .footer-col h3 {
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .footer-col h1::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            background-color: #279400;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+
+        .footer-col ul li:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: #279400;
+            padding-left: 8px;
+        }
+
+        .footer-col .social-links a {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 0 10px 10px 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color: #ffffff;
+            transition: all 0.5s ease;
+        }
+
+        .footer-col .social-links a:hover {
+            color: #ffffff;
+            background-color: #279400;
+        }
+
+        /*responsive*/
+        @media(max-width: 767px) {
+            .footer-col {
+                width: 50%;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media(max-width: 574px) {
+            .footer-col {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- this is header section -->
+    <div class="header">
+        <h2 class="logo">Trade<span>G</span></h2>
+        <input type="checkbox" id="chk">
+        <label for="chk" class="show-menu-btn">
+            <i class="fas fa-ellipsis-h"></i>
+        </label>
+
+        <ul class="menu">
+            <a href="#">HOME</a>
+            <a href="#">STOCK MARKET COURSES</a>
+            <a href="#">SCREENERS</a>
+            <a href="#">ANALYSIS</a>
+            <a href="#">TRADING TOOLS</a>
+            <button>LOG IN / SIGN UP</button>
+            <label for="chk" class="hide-menu-btn">
+                <i class="fas fa-times"></i>
+            </label>
+        </ul>
+    </div>
+    <!-- header section end here -->
+
+    <!-- this is starting of banner -->
+    <section id="banner">
+        <div class="parent">
+            <div class="child1">
+                <h2>Up Your <span>Financial Skills</span> <br><strong> To <span>Advance</span> Your <br>
+                        <span>Carrer</strong></span>
+                    Path</h2>
+                <p>Learn Stock Market Trading From N.I.S.M & CFA Certified Financial experts.<br>
+                    Download Trading Learning app today.</p>
+                <button>Get Started</button>
+                <button>Free trial</button>
+                <div class="list1">
+                    <ul type="none">
+                        <i class="fa-sharp fa-solid fa-phone-volume" style="color: #e6c700;"></i>
+                        <li>Interactive sessions</li>
+                        <i class="fa-solid fa-briefcase" style="color: #ff6600;"></i>
+                        <li>Carrer-Oriented</li>
+                        <i class="fa-solid fa-lightbulb" style="color: #ff00d0;"></i>
+                        <li>Creative-Thinking</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="child1">
+                <img src="./images/banner.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- banner section end here -->
+
+    <section id="main">
+        <div class="parent">
+            <div class="box1">
+                <img src="./images/team.jpg" alt="">
+            </div>
+            <div class="box1">
+
+                <h2><u>Welcome to</u> <span>TRADeg Financial</span></h2>
+                <p>TRADog is a stock market training and analysis firm, we are one of the fastest growing TRADeg is a
+                    stock market training and analysis firm, we are one of the fastest growing organization in India The
+                    purpose of TRADeg is to provide a right way of trading to the retail traders and a perfect training
+                    to the one who wants to enter in stock market The social trading days are over. Today's retail
+                    Traders are as Capable as professional traders. Our motto is to empower Retail Traders of India and
+                    We are focused to provide a Technical overview of the market on daily basis as well as earnings and
+                    tools to Retail Technical overview of the market on daily basis as well as Learnings and tools to
+                    Retail Traders across the country</p>
+                <button class="btn">DISCOVER</button>
+            </div>
+    </section>
+
+    <!-- learning section start from here  -->
+    <section id="learning">
+        <div class="parent">
+            <div class="box1">
+                <h2><u>Learn Investment & Trading</u> with <span> Industry Experts</span></h2>
+                <p>"Take control of your financial future with our comprehensive financial learning opp From
+
+                    Take control of your financial future with our comprehensive financial learning opp. From Stock
+                    Investment and Mutual funds & Sips to Stock trading & Scalping, we have everything you need to make
+                    informed financial decisions. Traded learning app is designed to empower you with the knowledge and
+                    skills you need to succeed financially. From beginners to experienced investors, we have something
+                    for everyone".<br>
+
+                    everyone".</p>
+                <button class="btn">DISCOVER</button>
+
+            </div>
+            <div class="box1">
+                <img src="./images/learn.jpg" alt="">
+            </div>
+    </section>
+    <!-- learning section ends here -->
+
+    <!-- this is courses section -->
+    <section id="info">
+        <h2>Financial courses by CFA & N.I.SM Certified Finance Professionals</h2>
+        <div class="parent">
+            <div class="box">
+                <span>STOCK INVESTMENT LIVE MASTER COURSE <img src="./images/live.png" alt=""></span>
+                <div class="section">
+                    <span>
+                        <img src="./images/calendar.png" alt="">15-01-2023
+                    </span>
+                    <span>
+                        <img src="./images/clock.png" alt="">7:00 PM
+                    </span>
+                    <div class="skills">
+                        <div class="skill">
+                            <div class="skill-name">Batch Progress</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="70%" style="max-width:70% "></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Learn everything you need to know about the basics of investing. including how to create a
+                        diversified portfolio, how to analyze potential investments, and how to manage risk</p>
+                    <button>Explore More</button>
+                </div>
+            </div>
+            <div class="box">
+                <span>EQUITY INTRADAY LIVE COURSE <img src="./images/live.png" alt=""></span>
+                <div class="section">
+                    <span>
+                        <img src="./images/calendar.png" alt="">15-01-2023
+                    </span>
+                    <span>
+                        <img src="./images/clock.png" alt="">7:00 PM
+                    </span>
+                    <div class="skills">
+                        <div class="skill">
+                            <div class="skill-name">Batch Progress</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="59%" style="max-width:59% "></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Learn everything you need to know about the intraday. how to identify and captalize on
+                        trading opportunities, manage risk, and how to use technical analysis to make informed decisions
+                    </p>
+                    <button>Explore More</button>
+                </div>
+            </div>
+            <div class="box">
+                <span>FUTURE & OPTION LIVE TRADING COURSE <img src="./images/live.png" alt=""></span>
+                <div class="section">
+                    <span>
+                        <img src="./images/calendar.png" alt="">15-01-2023
+                    </span>
+                    <span>
+                        <img src="./images/clock.png" alt="">7:00 PM
+                    </span>
+                    <div class="skills">
+                        <div class="skill">
+                            <div class="skill-name">Batch Progress</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="80%" style="max-width:80% "></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Learn everything you need to know about the basics of future and options trading. including how
+                        to use these financial instruments to hedge risk and capitalize on price movements</p>
+                    <button>Explore More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="info" class="info2">
+        <div class="parent">
+            <div class="box">
+                <span>BECOME A MUTUAL FUNDS DISTRIBUTOR <img src="./images/live.png" alt=""></span>
+                <div class="section">
+                    <span>
+                        <img src="./images/calendar.png" alt="">15-01-2023
+                    </span>
+                    <span>
+                        <img src="./images/clock.png" alt="">7:00 PM
+                    </span>
+                    <div class="skills">
+                        <div class="skill">
+                            <div class="skill-name">Batch Progress</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="55%" style="max-width:55% "></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Prepare for NISM certification with experts alongwith mutual funds distribution traning.
+                        prepare
+                        as long as you will become a certified professional</button>
+                        <button>Explore More</button>
+                </div>
+            </div>
+            <div class="box">
+                <span>BECOME A EQUITY RESEARCH ANALYST<img src="./images/live.png" alt=""></span>
+                <div class="section">
+                    <span>
+                        <img src="./images/calendar.png" alt="">15-01-2023
+                    </span>
+                    <span>
+                        <img src="./images/clock.png" alt="">7:00 PM
+                    </span>
+                    <div class="skills">
+                        <div class="skill">
+                            <div class="skill-name">Batch Progress</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="42%" style="max-width:42% "></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Prepare for NISM certification with experts along with equity derivativs distribution
+                        training.
+                        prepare as long as you will become a certified professional
+                    </p>
+                    <button>Explore More</button>
+                </div>
+            </div>
+            <div class="box">
+                <span>LEARN FOREX TRADING<img src="./images/live.png" alt=""></span>
+                <div class="section">
+                    <span>
+                        <img src="./images/calendar.png" alt="">15-01-2023
+                    </span>
+                    <span>
+                        <img src="./images/clock.png" alt="">7:00 PM
+                    </span>
+                    <div class="skills">
+                        <div class="skill">
+                            <div class="skill-name">Batch Progress</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="52%" style="max-width:52% "></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Learn everything you need about the foreign exchange market,including the various
+                        instruments avaliable for trading. and the tools and strategies used by professional traders
+                    </p>
+                    <button>Explore More</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="info" class="info3">
+        <div class="parent">
+            <div class="box">
+                <span>LEARN ALGO BASED TRADING<img src="./images/live.png" alt=""></span>
+                <div class="section">
+                    <span>
+                        <img src="./images/calendar.png" alt="">15-01-2023
+                    </span>
+                    <span>
+                        <img src="./images/clock.png" alt="">7:00 PM
+                    </span>
+                    <div class="skills">
+                        <div class="skill">
+                            <div class="skill-name">Batch Progress</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="21%" style="max-width:21% "></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Learn how to rapidly execute trades based on complex algorithm that can analye market conditions
+                        & make decision in real-time</p>
+                    <button>Explore More</button>
+                </div>
+            </div>
+            <div class="box">
+                <span>LEARN CRYPTOCURRENCY TRADING <img src="./images/live.png" alt=""></span>
+                <div class="section">
+                    <span>
+                        <img src="./images/calendar.png" alt="">15-01-2023
+                    </span>
+                    <span>
+                        <img src="./images/clock.png" alt="">7:00 PM
+                    </span>
+                    <div class="skills">
+                        <div class="skill">
+                            <div class="skill-name">Batch Progress</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="35%" style="max-width:35% "></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>With our cryptocurrency course.you'll have the knowledge and sills you need to confidently invest
+                        and trade digital assest
+                    </p>
+                    <button>Explore More</button>
+                </div>
+            </div>
+            <div class="box">
+                <span>LEARN BLOCKCHAIN TECHNNOLOGY <img src="./images/live.png" alt=""></span>
+                <div class="section">
+                    <span>
+                        <img src="./images/calendar.png" alt="">15-01-2023
+                    </span>
+                    <span>
+                        <img src="./images/clock.png" alt="">7:00 PM
+                    </span>
+                    <div class="skills">
+                        <div class="skill">
+                            <div class="skill-name">Batch Progress</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="39%" style="max-width:39% "></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Learn working of blockchain technology and how it supports crypto currency</p>
+                    <button>Explore More</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="info" class="info4">
+        <div class="parent">
+            <div class="box">
+                <span>STOCK MARKET & FINANCE<img src="./images/live.png" alt=""></span>
+                <div class="section">
+                    <span>
+                        <img src="./images/calendar.png" alt="">15-01-2023
+                    </span>
+                    <span>
+                        <img src="./images/clock.png" alt="">7:00 PM
+                    </span>
+                    <div class="skills">
+                        <div class="skill">
+                            <div class="skill-name">Batch Progress</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="21%" style="max-width:21% "></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Learn everything you need to know about the basics of stock market and finance.including how to
+                        analyze and evaluate stocks,bands,and other financial instruments</p>
+                    <button>Explore More</button>
+                </div>
+            </div>
+            <div class="box">
+                <span> FINANCIAL WORKSHOP(FOR STUDENT)<img src="./images/live.png" alt=""></span>
+                <div class="section">
+                    <span>
+                        <img src="./images/calendar.png" alt="">15-01-2023
+                    </span>
+                    <span>
+                        <img src="./images/clock.png" alt="">7:00 PM
+                    </span>
+                    <div class="skills">
+                        <div class="skill">
+                            <div class="skill-name">Batch Progress</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="27%" style="max-width:27% "></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Learn about finance,money management,financial planning and investment, and how to create a
+                        financial plan that aligns with your goals.
+                    </p>
+                    <button>Explore More</button>
+                </div>
+            </div>
+            <div class="box">
+                <span>STOCK MARKET MASTER COURSE <img src="./images/live.png" alt=""></span>
+                <div class="section">
+                    <span>
+                        <img src="./images/calendar.png" alt="">15-01-2023
+                    </span>
+                    <span>
+                        <img src="./images/clock.png" alt="">7:00 PM
+                    </span>
+                    <div class="skills">
+                        <div class="skill">
+                            <div class="skill-name">Batch Progress</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="55%" style="max-width:55% "></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Learn everything you need to know about the advanced strategies and technique used by
+                        professional investors to maximize returns and minize risk in the stock market</p>
+                    <button>Explore More</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- courses section ends here -->
+
+    <!-- Explore a new horizon of Technology with TradeG -->
+    <section id="market">
+        <h2>Explore a new horizon of Technology with TradeG</h2>
+        <h4>Separate the wheat from the chaff with our Screeners - handy for sorting <br> symbols both by fundamental
+            and technical indicators.</h4>
+        <div class="parent">
+            <div class="box1">
+                <img src="./images/table.jpg" alt="">
+            </div>
+            <div class="box1">
+                <div class="list1">
+                    <ul>
+                        <i class="fa-sharp fa-solid fa-circle-dot"></i> Equity Screener
+                        <i class="fa-sharp fa-solid fa-circle-dot"></i>Forex Screener
+                        <i class="fa-sharp fa-solid fa-circle-dot"></i>Crypto Screener
+                    </ul>
+                </div>
+                <button>Explore Now</button>
+            </div>
+    </section>
+    <!-- this section ends here -->
+
+    <!-- this is activity section -->
+    <section id="activity">
+        <div class="parent">
+            <div class="box1">
+                <img src="./images/ux (2).png" alt="">
+            </div>
+            <div class="box1">
+
+                <h2>Keep an eye activities and create best possible way for your trading. use or analysis</h2>
+
+                <div class="list">
+                    <ul>
+                        <li>NIFY OPTION CHAIN</li>
+                        <li>NIFTY 01</li>
+                        <li>BANK NIFTY OPTION CHAIN</li>
+                        <li>BANKNIFY OI</li>
+                        <li>FOREX COPY TRADING</li>
+                        <li>LIVE OHLC</li>
+                        <li>SECTOR WISE MARKET</li>
+                        <li>ECONOMIC CALENDER</li>
+                        <li>FOREX HEAT MAP</li>
+                        <li>FOREX MARKET SENTIMENT</li>
+                        <li>FOREX TECHNICAL SIGNALS</li>
+                    </ul>
+                </div>
+
+
+                <button class="btn">Explore Now</button>
+            </div>
+    </section>
+    <!-- ends here -->
+
+    <!-- this is journey section -->
+    <section id="journey">
+        <div class="parent">
+            <div class="box1">
+                <img src="./images/table.jpg" alt="">
+            </div>
+            <div class="box1">
+                <h2>Be a pro trader! Use our trading tools to enhance your trading journey</h2>
+
+                <div class="list">
+                    <ul>
+                        <li>ADVANCED CURRENCY CONVERTER</li>
+                        <li>MARGIN REQUREMENT CALCULATOR</li>
+                        <li>CFD TECHNICAL INDICATOR</li>
+                        <li>HISTORICAL DATA EXPORT</li>
+                        <li>PIVOT POINT CALCULATOR</li>
+                        <li>FIBONACCI CALCULATOR</li>
+                        <li>FOREX POSITION SIZE CALCULATOR</li>
+                        <li>FOREX PROFIT CALCULATOR</li>
+                    </ul>
+                </div>
+                <button>Explore Now</button>
+            </div>
+    </section>
+    <!-- ends here -->
+
+    <!-- BENEFITS OF OUR ONLINE
+Finance School -->
+    <section id="school">
+        <h1>BENEFITS OF OUR ONLINE</h1>
+        <h3>Finance School</h3>
+        <div class="parent">
+            <div class="box">
+                <div class="card">
+                    <span>
+                        <img src="./images/interaction (4).png" alt="">
+                        <h2 class="card-heading">Social interaction</h2>
+                    </span>
+                    <p class="card-paragraph">Our courses offer forums or other opportunnities to connect with other
+                        students allowing you to build a network of proffessionals in your fiels. </p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="card">
+                    <span>
+                        <img src="./images/politics.png" alt="">
+                        <h2 class="card-heading">Diversity</h2>
+                    </span>
+                    <p class="card-paragraph">There is a wide range of finance courses available allowing you to choose
+                        the corse that best meets your needs. </p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="card">
+                    <span>
+                        <img src="./images/convenience-store.png" alt="">
+                        <h2 class="card-heading">Convenience</h2>
+                    </span>
+                    <p class="card-paragraph">Our courses can be accessed from anywhere with an internet connection,
+                        making it easy to leam wherever you are. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="school" class="school2">
+        <div class="parent">
+            <div class="box">
+                <div class="card">
+                    <span>
+                        <img src="./images/flexible.png" alt="">
+                        <h2 class="card-heading">Flexibility</h2>
+                    </span>
+                    <p class="card-paragraph">Our Online Fin-school allows you to learn at your own pace
+                        which can be convenient if you have a busy life or other commitments. </p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="card">
+                    <span>
+                        <img src="./images/money.png" alt="">
+                        <h2 class="card-heading">Affordability</h2>
+                    </span>
+                    <p class="card-paragraph">Our courses are often more affordable than traditional in- person courses,
+                        particularly if you are paying for Offline Classes. </p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="card">
+                    <span>
+                        <img src="./images/goal.png" alt="">
+                        <h2 class="card-heading">Access to Expertise</h2>
+                    </span>
+                    <p class="card-paragraph">Our courses often feature lectures from experts in the field, giving you
+                        access to a wide range of knowledge and experience. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ends here -->
+
+    <!-- Reasons: Why you should Learn Finance at TradeG Financial -->
+    <section id="reason">
+        <h1>Reasons: Why you should Learn <span>Finance</span> at <span>Trade<strong>G</strong> Financial</span></h1>
+        <div class="parent">
+            <div class="card">
+                <img src="./images/number-1.png" alt="your-image-alt" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-heading">NISM/ CFA CERTIFIED EDUCATION</h2>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/number-2.png" alt="your-image-alt" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-heading">ONE TO ONE SESSIONS WITH CERTIFIED MARKET EXPERTS</h2>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/three.png" alt="your-image-alt" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-heading">EXTENSIVE STUDY MATERIALS PREPARED BY MARKET EXPERTS</h2>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="reason" class="reason1">
+        <div class="parent">
+            <div class="card">
+                <img src="./images/number-4.png" alt="your-image-alt" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-heading">DIVERSIFIED OF COURSE MODULES</h2>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/number-5.png" alt="your-image-alt" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-heading">6 MONTHS DOUBT SUPPORT AFTER COURSE COMPLETION</h2>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/number-6.png" alt="your-image-alt" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-heading">LIFETIME FREE ANALYSIS SERVICES & TRADING TOOLS</h2>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ends here -->
+
+    <!-- We help you to -->
+    <section id="box">
+        <h1>We help you to</h1>
+        <div class="flex">
+            <div class="child" style="background-color: #e6c700;">LEARN</div>
+            <div class="child" style="background-color: #ff6600;">ANALYSE</div>
+            <div class="child" style="background-color: #8800ff;">INVEST</div>
+        </div>
+        <div class="flex flex_1">
+            <div class="child child_1" style="background-color: #0099ff;">TRADE</div>
+            <div class="child child_1" style="background-color: #279400;">BOOK PROFIT</div>
+            <div class="child child_1" style="background-color: crimson;">STAY HAPPY</div>
+        </div>
+    </section>
+    <!-- ends here -->
+
+    <!-- Frequently Asked Questions -->
+    <section id="task">
+        <h1><span>Frequently</span> Asked Questions</h1>
+        <div class="parent">
+            <ul id="accordion">
+                <li>
+                    <label for="first">1) IF I'M COMPLETELY NEW TO TRADING, WILL I UNDERSTAND THE MATERIAL ? <span>&#x3e
+                        </span></label>
+                    <input type="radio" name="accordion" id="first" checked>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam autem, quaerat, corporis error
+                            quibusdam a culpa, id vitae aliquam delectus quos consequatur et ut ad reprehenderit odit?
+                            Nostrum, assumenda dicta?</p>
+                    </div>
+                </li>
+                <ul></ul>
+                <li>
+                    <label for="second">2) WILL I BE ABLE TO TO COMMUNICATE WITH TRADEG LEARNING EDUCATORS AND ASK THEM
+                        QUESTIONS PERSONALLY ? <span>&#x3e </span></label>
+                    <input type="radio" name="accordion" id="second">
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam autem, quaerat, corporis error
+                            quibusdam a culpa, id vitae aliquam delectus quos consequatur et ut ad reprehenderit odit?
+                            Nostrum, assumenda dicta?</p>
+                    </div>
+                </li>
+                <li>
+                    <label for="third">3) WHAT IS THE POINT OF HOMEWORK, AND HOW WILL IT HELP ME? <span>&#x3e
+                        </span></label>
+                    <input type="radio" name="accordion" id="third">
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam autem, quaerat, corporis error
+                            quibusdam a culpa, id vitae aliquam delectus quos consequatur et ut ad reprehenderit odit?
+                            Nostrum, assumenda dicta?</p>
+                    </div>
+                </li>
+                <li>
+                    <label for="four">4) CAN AN ORDINARY PERSON WITHOUT SPECIAL COMPUTER SKILLS DEAL WITH THE LEARNING
+                        PLATFORM AND IMPLEMENT THE TOOLS THAT TRADEG LEARNING APP WILL TECH? <span>&#x3e </span></label>
+                    <input type="radio" name="accordion" id="four">
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam autem, quaerat, corporis error
+                            quibusdam a culpa, id vitae aliquam delectus quos consequatur et ut ad reprehenderit odit?
+                            Nostrum, assumenda dicta?</p>
+                    </div>
+                </li>
+                <li>
+                    <label for="five">5) EXAMPLES AND LEARNING WILL BE BASED ON WHICH MARKET AND TIMEFRAM? <span>&#x3e
+                        </span></label>
+                    <input type="radio" name="accordion" id="five">
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam autem, quaerat, corporis error
+                            quibusdam a culpa, id vitae aliquam delectus quos consequatur et ut ad reprehenderit odit?
+                            Nostrum, assumenda dicta?</p>
+                    </div>
+                </li>
+                <li>
+                    <label for="six">6) WHAT SUPPORT AND BY WHOM IT WILL BE PROVIDED TO ME THROUGHOUT THE LEARNING
+                        PROGRAM? <span>&#x3e </span></label>
+                    <input type="radio" name="accordion" id="six">
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam autem, quaerat, corporis error
+                            quibusdam a culpa, id vitae aliquam delectus quos consequatur et ut ad reprehenderit odit?
+                            Nostrum, assumenda dicta?</p>
+                    </div>
+                </li>
+                <li>
+                    <label for="seven">7) I TRADE SMALL VOLUMES,BUT I WANT TO INCREASE THEM. HOW WILL PARTICIPATION IN
+                        PROGRAM HELP ME WITH THIS? <span>&#x3e </span></label>
+                    <input type="radio" name="accordion" id="seven">
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam autem, quaerat, corporis error
+                            quibusdam a culpa, id vitae aliquam delectus quos consequatur et ut ad reprehenderit odit?
+                            Nostrum, assumenda dicta?</p>
+                    </div>
+                </li>
+                <li>
+                    <label for="eight">8) HOW IS THIS PROGRAM DIFFERENT FROM ANY AVERAGE TRADING COURSE?<span>&#x3e
+                        </span></label>
+                    <input type="radio" name="accordion" id="eight">
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam autem, quaerat, corporis error
+                            quibusdam a culpa, id vitae aliquam delectus quos consequatur et ut ad reprehenderit odit?
+                            Nostrum, assumenda dicta?</p>
+                    </div>
+                </li>
+                <li>
+                    <label for="nine">9) WILL I BE ABLE TO LEARN SCALPING WHILE STUDYING IN PROGRAM? <span>&#x3e
+                        </span></label>
+                    <input type="radio" name="accordion" id="nine">
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam autem, quaerat, corporis error
+                            quibusdam a culpa, id vitae aliquam delectus quos consequatur et ut ad reprehenderit odit?
+                            Nostrum, assumenda dicta?</p>
+                    </div>
+                </li>
+                <li>
+                    <label for="ten">10) ISN'T TRADING JUST ANOTHER FROM OF GAMBLING? <span>&#x3e </span></label>
+                    <input type="radio" name="accordion" id="ten">
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam autem, quaerat, corporis error
+                            quibusdam a culpa, id vitae aliquam delectus quos consequatur et ut ad reprehenderit odit?
+                            Nostrum, assumenda dicta?</p>
+                    </div>
+                </li>
+                <li>
+                    <label for="elven">11) HOW LONG DOES IT TAKE TO COMPLETE THE LEARNING PROGRAM? <span>&#x3e
+                        </span></label>
+                    <input type="radio" name="accordion" id="elven">
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam autem, quaerat, corporis error
+                            quibusdam a culpa, id vitae aliquam delectus quos consequatur et ut ad reprehenderit odit?
+                            Nostrum, assumenda dicta?</p>
+                    </div>
+                </li>
+                <li>
+                    <label for="twelve">12) WILL I HAVE A 24/7 ACCESS TO MATERIAL?<span>&#x3e </span></label>
+                    <input type="radio" name="accordion" id="twelve">
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam autem, quaerat, corporis error
+                            quibusdam a culpa, id vitae aliquam delectus quos consequatur et ut ad reprehenderit odit?
+                            Nostrum, assumenda dicta?</p>
+                    </div>
+                </li>
+
+
+            </ul>
+        </div>
+    </section>
+    <!-- ends here -->
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h1>Trade<span>G</span></h1>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Address</h3>
+                    <ul>
+                        <li><a href="#">520-A MAIDANGARHI NEW DELHI-11017<br>WORKING HOURS<br>MORNING 9:00 AM IST
+                                <br>EVENING 10:00 PM IST</a></li>
+
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contacts</h3>
+                    <ul>
+                        <li><a href="#">+916287848943</a></li>
+                        <li><a href="#">for queries - info@tradeg.org</a></li>
+                        <li><a href="#">for carrers - careers@tradeg.org</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>follow us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ends here -->
+</body>
+
+</html>
